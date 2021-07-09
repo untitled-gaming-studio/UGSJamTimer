@@ -1,6 +1,6 @@
 function getTimeRemaining(endtime) {
   var d = new Date()
-  var current = new Date(Date.UTC(d.getUTCFullYear(),d.getUTCMonth(),d.getUTCDate(),d.getUTCHours(),d.getUTCMinutes(),d.getUTCSeconds()));
+  var current = new Date().toUTCString();
   const total = Date.parse(endtime) - Date.parse(current);
   const seconds = Math.floor((total / 1000) % 60);
   const minutes = Math.floor((total / 1000 / 60) % 60);
