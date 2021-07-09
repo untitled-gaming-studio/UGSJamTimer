@@ -1,9 +1,8 @@
 body{
-	text-align: center;
-	background: #7289DA;
+  text-align: center;
+  background: #7289DA;
   font-family: sans-serif;
   font-weight: 100;
-	text-shadow: 2px 0 0 #000, 0 -2px 0 #000, 0 2px 0 #000, -2px 0 0 #000, -2p -2px 0 #000, 2px 2px 0 #000;
 	
 }
 
@@ -12,7 +11,7 @@ h1{
   font-weight: 100;
   font-size: 40px;
   margin: 40px 0px 20px;
-	text-shadow: 2px 0 0 #000, 0 -2px 0 #000, 0 2px 0 #000, -2px 0 0 #000, -2p -2px 0 #000, 2px 2px 0 #000;
+  text-shadow: 2px 0 0 #000, 0 -2px 0 #000, 0 2px 0 #000, -2px 0 0 #000, -2px -2px 0 #000, 2px 2px 0 #000;
 }
 
 #clockdiv{
