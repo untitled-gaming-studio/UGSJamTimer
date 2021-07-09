@@ -16,8 +16,18 @@ h1{
   font-size: 40px;
   margin: 40px 0px 20px;
   text-shadow: 2px 0 0 #000, 0 -2px 0 #000, 0 2px 0 #000, -2px 0 0 #000, -2px -2px 0 #000, 2px 2px 0 #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 1s ease-in-out
 }
-
+h2{
+  color: #fff;
+  font-weight: 100;
+  font-size: 25px;
+  margin: 40px 0px 20px;
+  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000, -1px -1px 0 #000, 1px 1px 0 #000;
+}
 #clockdiv{
 	font-family: sans-serif;
 	color: #fff;
