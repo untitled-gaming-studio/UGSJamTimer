@@ -1,13 +1,15 @@
 function getTimeRemaining(endtime) {
+  var d = new Date()
   var current = new Date();
   console.log("current : " + current +"\ndeadline : "+ deadline)
-
-  const seconds = current.getSeconds() - deadline.getSeconds();
-  const minutes = current.getMinutes() - deadline.getMinutes();
-  const hours = deadline.getHours() - current.getHours();
-  const days = deadline.getDay() - current.getDay();
+  const total = Date.parse(endtime) - Date.parse(current);
+  const seconds = Math.floor((total / 1000) % 60);
+  const minutes = Math.floor((total / 1000 / 60) % 60);
+  const hours = Math.floor((total / (1000 * 60 * 60)) % 24);
+  const days = Math.floor(total / (1000 * 60 * 60 * 24));
   
   return {
+    total,
     days,
     hours,
     minutes,
