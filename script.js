@@ -8,7 +8,7 @@ function getTimeRemaining(endtime) {
   var utc = localTime + localOffset;
 
   var current = new Date(utc)
-  console.log("current : " + current +"\ndeadline : "+ deadline)
+  //console.log("current : " + current +"\ndeadline : "+ deadline)
   const total = Date.parse(endtime) - Date.parse(current);
   const seconds = Math.floor((total / 1000) % 60);
   const minutes = Math.floor((total / 1000 / 60) % 60);
