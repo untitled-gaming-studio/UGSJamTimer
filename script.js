@@ -1,6 +1,7 @@
 function getTimeRemaining(endtime) {
   var d = new Date()
   var current = new Date().toUTCString();
+  //alert(Date.parse(current));
   const total = Date.parse(endtime) - Date.parse(current);
   const seconds = Math.floor((total / 1000) % 60);
   const minutes = Math.floor((total / 1000 / 60) % 60);
@@ -40,5 +41,5 @@ function initializeClock(id, endtime) {
   const timeinterval = setInterval(updateClock, 1000);
 }
 
-const deadline = new Date(Date.UTC(2021,6,9,21,0,0));
+const deadline = new Date(Date.UTC(2021,6,9,21,0,0)).toUTCString();
 initializeClock('clockdiv', deadline);
