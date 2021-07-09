@@ -13,13 +13,17 @@ body{
 h1{
   color: #fff;
   font-weight: 100;
-  font-size: 40px;
+  font-size: 80px;
   margin: 40px 0px 20px;
   text-shadow: 2px 0 0 #000, 0 -2px 0 #000, 0 2px 0 #000, -2px 0 0 #000, -2px -2px 0 #000, 2px 2px 0 #000;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all 1s ease-in-out
+  -webkit-user-select: none; /* Safari */        
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
 }
 h2{
   color: #fff;
@@ -27,6 +31,10 @@ h2{
   font-size: 25px;
   margin: 40px 0px 20px;
   text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000, -1px -1px 0 #000, 1px 1px 0 #000;
+  -webkit-user-select: none; /* Safari */        
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
 }
 #clockdiv{
 	font-family: sans-serif;
@@ -65,4 +73,7 @@ h2{
     display: table-cell;
     height: 100%;
     vertical-align: middle;
+}
+img{
+  vertical-align:middle;
 }
