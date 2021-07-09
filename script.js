@@ -1,6 +1,13 @@
 function getTimeRemaining(endtime) {
-  var d = new Date()
-  var current = new Date();
+  var d = new Date();
+
+  var localTime = d.getTime();
+
+  var localOffset = 0;// d.getTimezoneOffset() * 60000;
+
+  var utc = localTime + localOffset;
+
+  var current = new Date(utc)
   console.log("current : " + current +"\ndeadline : "+ deadline)
   const total = Date.parse(endtime) - Date.parse(current);
   const seconds = Math.floor((total / 1000) % 60);
@@ -41,5 +48,5 @@ function initializeClock(id, endtime) {
   const timeinterval = setInterval(updateClock, 1000);
 }
 
-const deadline = new Date(Date.UTC(2021,6,9,21,0,0));
+const deadline = new Date(Date.UTC(2021,6,9,20,0,0));
 initializeClock('clockdiv', deadline);
