@@ -1,6 +1,7 @@
 function getTimeRemaining(endtime) {
   var d = new Date()
   var current = new Date().toUTCString();
+  console.log("current : " + current +"\ndeadline : "+ deadline)
   //alert(Date.parse(current));
   const total = Date.parse(endtime) - Date.parse(current);
   const seconds = Math.floor((total / 1000) % 60);
