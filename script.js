@@ -48,5 +48,5 @@ function initializeClock(id, endtime) {
   const timeinterval = setInterval(updateClock, 1000);
 }
 
-const deadline = new Date(Date.UTC(2021,6,18,0,0,0));
+const deadline = new Date(Date.UTC(2021,6,17,19,0,0));
 initializeClock('clockdiv', deadline);
