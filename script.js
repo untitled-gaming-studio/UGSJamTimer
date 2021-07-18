@@ -26,8 +26,10 @@ function getTimeRemaining(endtime) {
   const hours = Math.floor((total / (1000 * 60 * 60)) % 24);
   const days = Math.floor(total / (1000 * 60 * 60 * 24));
   
-  if (seconds < 0)
+  if (seconds <= 0 & minutes <= 0 & hours <= 0 & days <= 0 )
   {
+    //console.log("counter has ended")
+    //location.reload();
     annouce_end();
   }
   return {
@@ -64,12 +66,14 @@ function initializeClock(id, endtime) {
 }
 
 var deadline = new Date(Date.UTC(2021,6,18,20,0,0));
-var seconds_left = getTimeRemaining(deadline).seconds;
+var time_remaining = getTimeRemaining(deadline);
 
-if(seconds_left > 0)
+if (time_remaining.seconds <= 0 & time_remaining.minutes <= 0 & time_remaining.hours <= 0 & time_remaining.days <= 0 )
 {
-  initializeClock('clockdiv', deadline);
+  console.log("initial has ended")
+  annouce_end();
 }
 else{
-  annouce_end();
+  console.log("created clock")
+  initializeClock('clockdiv', deadline);
 }
